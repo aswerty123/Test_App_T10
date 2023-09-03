@@ -58,7 +58,7 @@ export const Header = () => {
               <span class="font-medium">Logout</span>{' '}
             </Item>
           ) : (
-            <Item tw="rounded-md border-2 border-gray-200" onClick={() => navigate('/')}>
+            <Item tw="rounded-md border-2 border-gray-200" onClick={() => navigate('/login')}>
               {' '}
               <BiLogIn tw="h-6 w-8 rotate-180" />
               <span class="font-medium">Login</span>
