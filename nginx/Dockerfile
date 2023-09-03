@@ -1,8 +1,12 @@
-FROM nginx
+FROM nginx:latest
 
-RUN rm /etc/nginx/nginx.conf 
+WORKDIR /usr/share/nginx/html
 
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY . .
+
+RUN rm /etc/nginx/conf.d/default.conf
+
+COPY ./nginx.conf /etc/nginx/conf.d
 
 #RUN service nginx restart
 
