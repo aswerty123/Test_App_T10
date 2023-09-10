@@ -67,3 +67,4 @@ services:
       - customer
     ports:
       - 90:90
+    restart: always
