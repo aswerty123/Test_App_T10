@@ -66,5 +66,5 @@ services:
       - shopping
       - customer
     ports:
-      - 90:90
+      - 80:80
     restart: always
