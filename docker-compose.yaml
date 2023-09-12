@@ -3,7 +3,7 @@ services:
   nosql-db:
     image: mongo
     ports:
-      - 27018:27017
+      - '27018:27017'
     container_name: nosql-db
     volumes:
       - ./db/:/data/db
@@ -11,10 +11,9 @@ services:
     build:
       dockerfile: Dockerfile
       context: ./products
-    command: npm start
     container_name: products
     ports:
-      - 8002:8002
+      - '8002:8002'
     restart: always
     depends_on:
       - 'nosql-db'
@@ -28,10 +27,9 @@ services:
     build:
       dockerfile: Dockerfile
       context: ./shopping
-    command: npm start
     container_name: shopping
     ports:
-      - 8003:8003
+      - '8003:8003'
     restart: always
     depends_on:
       - 'nosql-db'
@@ -44,10 +42,9 @@ services:
     build:
       dockerfile: Dockerfile
       context: ./customer
-    command: npm start
     container_name: customer
     ports:
-      - 8001:8001
+      - '8001:8001'
     restart: always
     depends_on:
       - 'nosql-db'
