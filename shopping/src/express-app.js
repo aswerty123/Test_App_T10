@@ -1,21 +1,25 @@
 const express = require('express');
-const cors  = require('cors');
+const cors = require('cors');
 const path = require('path');
 const { shopping, appEvents } = require('./api');
-const { CreateChannel } = require('./utils')
+const { CreateChannel } = require('./utils');
 
 module.exports = async (app) => {
+  app.use((_req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', '*');
 
-    app.use(express.json());
-    app.use(cors());
-    app.use(express.static(__dirname + '/public'))
- 
-    //api
-    // appEvents(app);
+    next();
+  });
+  app.use(express.json());
+  app.use(cors());
+  app.use(express.static(__dirname + '/public'));
 
-    const channel = await CreateChannel()
+  //api
+  // appEvents(app);
 
-    shopping(app, channel);
-    // error handling
-    
-}
+  const channel = await CreateChannel();
+
+  shopping(app, channel);
+  // error handling
+};
