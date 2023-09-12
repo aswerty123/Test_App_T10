@@ -2,11 +2,9 @@ FROM node
 
 WORKDIR /app/products
 
-COPY package.json .
+COPY . .
 
 RUN npm install
-
-COPY . .
 
 EXPOSE 8002
 

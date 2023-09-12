@@ -2,11 +2,9 @@ FROM node
 
 WORKDIR /app/shopping
 
-COPY package.json .
+COPY . .
 
 RUN npm install
-
-COPY . .
 
 EXPOSE 8003
 
