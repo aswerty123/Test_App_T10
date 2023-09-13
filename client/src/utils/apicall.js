@@ -1,6 +1,6 @@
 import api from 'axios';
 
-api.defaults.baseURL = 'http://localhost:80/';
+api.defaults.baseURL = 'http://35.175.192.253:80/';
 
 const setHeader = () => {
   const token = localStorage.getItem('token');
