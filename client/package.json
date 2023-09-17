@@ -1,5 +1,5 @@
 {
-  "name": "nusiss_archss_t10_frontend",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -32,7 +32,7 @@
       "react-app/jest"
     ]
   },
-  "proxy": "http://localhost:80",
+  "proxy": "http://localhost:90",
   "browserslist": {
     "production": [
       ">0.2%",
