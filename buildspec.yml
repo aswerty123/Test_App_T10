@@ -6,23 +6,23 @@ phases:
   pre_build:
     commands:
       - echo "the prebuild phase begins"
-      - cd client
-      - npm install
+      # - cd client
+      # - npm install
   build:
     commands:
       - echo "the build phase begins"
-      # - echo `pwd`
-      - npm run build
-      # - echo `ls -la`
+      # # - echo `pwd`
+      # - npm run build
+      # # - echo `ls -la`
 
   post_build:
     commands:
       - echo "the post build phase. navigating back to root path"
-      - cp -R build/ ../
+      # - cp -R build/ ../
 
 artifacts:
   files:
-    - build/**/*
+    # - build/**/*
     - appspec.yml
     - customer/**/*
     - shopping/**/*
