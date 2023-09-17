@@ -27,6 +27,7 @@ artifacts:
     - customer/**/*
     - shopping/**/*
     - products/**/*
+    - client/**/*
     - nginx/*
     - scripts/*
     - docker-compose.yaml
